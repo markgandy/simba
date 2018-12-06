@@ -13,19 +13,13 @@ const Navbar = () => (
       </div>
       <div className="navbar-start">
         <Link className="navbar-item" to="/">
-          Surfing
-        </Link>
-        <Link className="navbar-item" to="/">
-          Accomodation
+          Location
         </Link>
         <Link className="navbar-item" to="/">
           Pricing
         </Link>
         <Link className="navbar-item" to="/contact">
           Contact
-        </Link>
-        <Link className="navbar-item" to="/">
-          Location
         </Link>
       </div>
       <div className="navbar-end">

@@ -1,42 +1,35 @@
 ---
-templateKey: index-page
-title: Our Passion
+templateKey: 'index-page'
+path: /
+title: Surfing, accommodation, and more
 image: /img/surfer-sunset.jpg
 heading: What we offer
 description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+  Simba Surf is the ultimate spot for surf lovers, or those just looking to relax / unwind. 
+  Located on the beautiful Pacific coast of Ecuador, we are just south of Canoa on a quiet 
+  section of beach with some amazing breaks for both beginner and advanced surfers.
 intro:
   blurbs:
-    - image: /img/coffee.png
+    - image: /img/surfing.png
       text: >
-        We sell green and roasted coffee beans that are sourced directly from
-        independent farmers and farm cooperatives. We’re proud to offer a
-        variety of coffee beans grown with great care for the environment and
-        local communities. Check our post or contact us directly for current
-        availability.
-    - image: /img/coffee-gear.png
+        There is surfing, of course. You can take lessons with our super cool
+        instructors, or hire some of our top quality gear and head out on your
+        own. What are you waiting for? Surfs up dude!
+    - image: /img/camping.png
       text: >
-        We offer a small, but carefully curated selection of brewing gear and
-        tools for every taste and experience level. No matter if you roast your
-        own beans or just bought your first french press, you’ll find a gadget
-        to fall in love with in our shop.
-    - image: /img/tutorials.png
+        We have camping available, with some tents already on site that you can use.
+        Or bring your own tent / camper. There are bathrooms and shower facilities.
+        Rooms and a kitchen are coming soon!
+    - image: /img/massage.png
       text: >
-        Love a great cup of coffee, but never knew how to make one? Bought a
-        fancy new Chemex but have no clue how to use it? Don't worry, we’re here
-        to help. You can schedule a custom 1-on-1 consultation with our baristas
-        to learn anything you want to know about coffee roasting and brewing.
-        Email us or call the store for details.
-    - image: /img/meeting-space.png
+        Feeling sore after too much surfing, or a long bus journey? Lily's Moonshine
+        Massage can relieve those tensions, with the dualistic goal of treatment
+        and prevention.
+    - image: /img/dancer.png
       text: >
-        We believe that good coffee has the power to bring people together.
-        That’s why we decided to turn a corner of our shop into a cozy meeting
-        space where you can hang out with fellow coffee lovers and learn about
-        coffee making techniques. All of the artwork on display there is for
-        sale. The full price you pay goes to the artist.
+        Anyone for Salsa? Salsa dancing is one of the most popular social dances
+        worldwide. You can learn / practice with us - have fun, build confidence
+        and get fit all at the same time.
   heading: What we offer
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their
