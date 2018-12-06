@@ -1,6 +1,5 @@
 ---
-templateKey: 'index-page'
-path: /
+templateKey: index-page
 title: Our Passion
 image: /img/surfer-sunset.jpg
 heading: What we offer
@@ -90,7 +89,7 @@ pricing:
         - Green or roasted beans
         - Up to 4 different varieties of beans
       plan: Big
-      price: '80'
+      price: '70'
     - description: Want a few tiny batches from different varieties? Try our custom plan
       items:
         - Whatever you need
@@ -99,3 +98,4 @@ pricing:
       plan: Custom
       price: '??'
 ---
+
