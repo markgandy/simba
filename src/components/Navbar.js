@@ -12,27 +12,27 @@ const Navbar = () => (
         </Link>
       </div>
       <div className="navbar-start">
-        <Link className="navbar-item" to="/surfing">
+        <Link className="navbar-item" to="/">
           Surfing
         </Link>
-        <Link className="navbar-item" to="/accomodation">
+        <Link className="navbar-item" to="/">
           Accomodation
         </Link>
-        <Link className="navbar-item" to="/pricing">
+        <Link className="navbar-item" to="/">
           Pricing
         </Link>
         <Link className="navbar-item" to="/contact">
           Contact
         </Link>
-        <Link className="navbar-item" to="/location">
+        <Link className="navbar-item" to="/">
           Location
         </Link>
       </div>
       <div className="navbar-end">
         <a
           className="navbar-item"
-          href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate"
-          target="_blank"
+          href="."
+          // target="_blank"
           rel="noopener noreferrer"
         >
           <span className="icon">
