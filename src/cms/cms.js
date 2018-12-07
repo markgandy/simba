@@ -1,7 +1,7 @@
 import CMS from 'netlify-cms'
 
-import AboutPagePreview from './preview-templates/AboutPagePreview'
 import HomePagePreview from './preview-templates/HomePagePreview'
+import PricingPagePreview from './preview-templates/PricingPagePreview'
 
-CMS.registerPreviewTemplate('about', AboutPagePreview)
 CMS.registerPreviewTemplate('home', HomePagePreview)
+CMS.registerPreviewTemplate('pricing', PricingPagePreview)
