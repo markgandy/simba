@@ -8,7 +8,6 @@ import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const HomePageTemplate = ({
   image,
-  title,
   heading,
   description,
   intro,
@@ -32,17 +31,6 @@ export const HomePageTemplate = ({
                   })`,
                 }}
               >
-                <h2
-                  className="has-text-weight-bold is-size-3"
-                  style={{
-                    boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
-                    backgroundColor: '#f40',
-                    color: 'white',
-                    padding: '1rem',
-                  }}
-                >
-                  {title}
-                </h2>
               </div>
               <div className="columns">
                 <div className="column is-7">

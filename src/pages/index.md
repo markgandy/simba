@@ -1,9 +1,8 @@
 ---
 templateKey: 'index-page'
 path: /
-title: Surfing, accommodation, and more
 image: /img/surfer-sunset.jpg
-heading: What we offer
+heading: Surfing, accommodation and more
 description: >-
   Simba Surf is the ultimate spot for surf lovers, or those just looking to relax / unwind. 
   Located on the beautiful Pacific coast of Ecuador, we are just south of Canoa on a quiet 
@@ -30,7 +29,7 @@ intro:
         Anyone for Salsa? Salsa dancing is one of the most popular social dances
         worldwide. You can learn / practice with us - have fun, build confidence
         and get fit all at the same time.
-  heading: What we offer
+  heading: Surfing, accommodation, and more
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their
     java’s origin and support the farmers that grew it. We take coffee
@@ -40,7 +39,7 @@ main:
   heading: A great community with so much to do
   description: >
     At Simba Surf you can make new friends, and have fun with the many activities - enjoy 
-    as much or as little as you like. As locals, we can help with advice on the best tours 
+    as much or as little as you like. As locals, we can help you with advice on the best tours 
     to do in the area. And we would love to take you to Beerkingo for some delicious local
     craft beer 🍻
   image1:
