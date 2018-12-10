@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
 import logo from '../img/logo.png'
+import { FaInstagram, FaFacebookF, FaWhatsapp } from 'react-icons/fa';
 
 const Navbar = () => (
   <nav className="navbar is-transparent">
@@ -30,9 +30,24 @@ const Navbar = () => (
           rel="noopener noreferrer"
         >
           <span className="icon">
-            <img src={github} alt="Github" />
+            <FaInstagram />
           </span>
         </a>
+        <a
+          className="navbar-item"
+          href="."
+          // target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span className="icon">
+            <FaFacebookF />
+          </span>
+        </a>
+        <Link className="navbar-item" to="/contact">
+          <span className="icon">
+            <FaWhatsapp />
+          </span>
+        </Link>
       </div>
     </div>
   </nav>
