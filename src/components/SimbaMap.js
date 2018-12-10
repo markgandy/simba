@@ -7,7 +7,7 @@ const SimbaMap = () => {
     console.log(`Marker #${payload} clicked at: `, anchor)
   }
   return (
-    <Map center={[-0.4736, -80.447]} zoom={14} width={750} height={400}>
+    <Map center={[-0.4736, -80.447]} zoom={14} height={400}>
       <Marker anchor={[-0.48275, -80.45106]} payload={1} onClick={handleMarkerClick} />
     </Map>
   )

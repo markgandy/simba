@@ -32,23 +32,15 @@ export const HomePageTemplate = ({
                 }}
               >
               </div>
-              <div className="columns">
-                <div className="column is-7">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    {heading}
-                  </h3>
-                  <p>{description}</p>
-                </div>
-              </div>
+              <h3 className="has-text-weight-semibold is-size-3">
+                {heading}
+              </h3>
+              <p className="is-size-5">{description}</p>
               <Features gridItems={intro.blurbs} />
-              <div className="columns">
-                <div className="column is-7">
-                  <h3 className="has-text-weight-semibold is-size-3">
-                    {main.heading}
-                  </h3>
-                  <p>{main.description}</p>
-                </div>
-              </div>
+              <h3 className="has-text-weight-semibold is-size-3">
+                {main.heading}
+              </h3>
+              <p className="is-size-5">{main.description}</p>
               <div className="tile is-ancestor">
                 <div className="tile is-vertical">
                   <div className="tile">

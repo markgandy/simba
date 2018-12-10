@@ -13,13 +13,11 @@ export const LocationPageTemplate = ({
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <div className="content">
-              <h2 className="has-text-weight-semibold is-size-2">
+              <h2 className="has-text-weight-semibold is-size-3">
                 {location.heading}
               </h2>
               <p className="is-size-5">{location.description}</p>
-              <div className="container">
-                <SimbaMap />
-              </div>
+              <SimbaMap />
             </div>
           </div>
         </div>
