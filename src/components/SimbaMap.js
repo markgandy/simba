@@ -1,29 +1,16 @@
 import React from 'react'
-import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
+import Map from 'pigeon-maps'
+import Marker from 'pigeon-marker'
 
-const SimbaMap = ({ data }) => {
-  const state = {
-    lat: -0.4807,
-    lng: -80.4519,
-    zoom: 14,
+const SimbaMap = () => {
+  const handleMarkerClick = ({ anchor, payload }) => {
+    console.log(`Marker #${payload} clicked at: `, anchor)
   }
-  const position = [state.lat, state.lng]
-  if (typeof window !== 'undefined') {
-    return (
-      <Map center={[-0.4736, -80.447]} zoom={14}>
-        <TileLayer
-          attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <Marker position={[-0.48275, -80.45106]}>
-          <Popup>
-            Simba Surf
-          </Popup>
-        </Marker>
-      </Map>
-    )
-  }
-  return null
+  return (
+    <Map center={[-0.4736, -80.447]} zoom={14} width={750} height={400}>
+      <Marker anchor={[-0.48275, -80.45106]} payload={1} onClick={handleMarkerClick} />
+    </Map>
+  )
 }
 
 export default SimbaMap

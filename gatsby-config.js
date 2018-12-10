@@ -4,7 +4,6 @@ module.exports = {
     description: 'Website for Simba Surf',
   },
   plugins: [
-    'gatsby-plugin-react-leaflet',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     {
