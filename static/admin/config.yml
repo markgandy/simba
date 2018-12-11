@@ -47,3 +47,10 @@ collections:
           - {label: Name, name: name, widget: string}
           - {label: Email, name: email, widget: string}
           - {label: Message, name: message, widget: string}
+      - file: "src/pages/contact/thanks.md"
+        label: "Thanks Page"
+        name: "thanks"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "thanks-page"}
+          - {label: Heading, name: heading, widget: string}
+          - {label: Description, name: description, widget: string}

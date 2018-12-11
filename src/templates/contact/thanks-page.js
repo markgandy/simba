@@ -4,7 +4,8 @@ import { graphql } from 'gatsby'
 import Layout from '../../components/Layout'
 
 export const ThanksPageTemplate = ({
-  thanks,
+  heading,
+  description
 }) => (
   <section className="section section--gradient">
     <div className="container">
@@ -13,9 +14,9 @@ export const ThanksPageTemplate = ({
           <div className="column is-10 is-offset-1">
             <div className="content">
               <h2 className="has-text-weight-semibold is-size-3">
-                {thanks.heading}
+                {heading}
               </h2>
-              <p className="is-size-5">{thanks.description}</p>
+              <p className="is-size-5">{description}</p>
             </div>
           </div>
         </div>
@@ -25,10 +26,8 @@ export const ThanksPageTemplate = ({
 )
 
 ThanksPageTemplate.propTypes = {
-  thanks: PropTypes.shape({
-    heading: PropTypes.string,
-    description: PropTypes.string,
-  }),
+  heading: PropTypes.string,
+  description: PropTypes.string,
 }
 
 const ThanksPage = ({ data }) => {
@@ -37,7 +36,8 @@ const ThanksPage = ({ data }) => {
   return (
     <Layout>
       <ThanksPageTemplate
-        thanks={frontmatter.thanks}
+        heading={frontmatter.heading}
+        description={frontmatter.description}
       />
     </Layout>
   )
@@ -57,10 +57,8 @@ export const thanksPageQuery = graphql`
   query ThanksPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
-        thanks {
-          heading
-          description
-        }
+        heading
+        description
       }
     }
   }
