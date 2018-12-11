@@ -33,7 +33,7 @@ export default class Contact extends React.Component {
   };
 
   render() {
-    const {heading, description} = this.props.contact
+    const {heading, description, name, email, message} = this.props
     return (
       <div>
         <h2 className="has-text-weight-semibold is-size-3">
@@ -57,19 +57,19 @@ export default class Contact extends React.Component {
             </label>
           </div>
           <div className="field">
-            <label className="label" htmlFor={"name"} >Your name</label>
+            <label className="label" htmlFor={"name"} >{name}</label>
             <div className="control">
               <input className="input" type={"text"} name={"name"} onChange={this.handleChange} id={"name"} required={true} />
             </div>
           </div>
           <div className="field">
-            <label className="label" htmlFor={"email"}>Email</label>
+            <label className="label" htmlFor={"email"}>{email}</label>
               <div className="control">
                 <input className="input" type={"email"} name={"email"} onChange={this.handleChange} id={"email"} required={true} />
               </div>
           </div>
           <div className="field">
-            <label className="label" htmlFor={"message"}>Message</label>
+            <label className="label" htmlFor={"message"}>{message}</label>
             <div className="control">
               <textarea className="textarea" name={"message"} onChange={this.handleChange} id={"message"} required={true} />
             </div>

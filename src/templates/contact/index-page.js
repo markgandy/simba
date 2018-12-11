@@ -5,7 +5,11 @@ import Layout from '../../components/Layout'
 import Contact from '../../components/Contact'
 
 export const ContactPageTemplate = ({
-  contact,
+  heading,
+  description,
+  name,
+  email,
+  message
 }) => (
   <section className="section section--gradient">
     <div className="container">
@@ -13,7 +17,13 @@ export const ContactPageTemplate = ({
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <div className="content">
-              <Contact contact={contact} />
+              <Contact 
+                heading={heading} 
+                description={description}
+                name={name}
+                email={email}
+                message={message}
+              />
             </div>
           </div>
         </div>
@@ -23,10 +33,11 @@ export const ContactPageTemplate = ({
 )
 
 ContactPageTemplate.propTypes = {
-  contact: PropTypes.shape({
-    heading: PropTypes.string,
-    description: PropTypes.string,
-  }),
+  heading: PropTypes.string,
+  description: PropTypes.string,
+  name: PropTypes.string,
+  email: PropTypes.string,
+  message: PropTypes.string,
 }
 
 const ContactPage = ({ data }) => {
@@ -35,7 +46,11 @@ const ContactPage = ({ data }) => {
   return (
     <Layout>
       <ContactPageTemplate
-        contact={frontmatter.contact}
+        heading={frontmatter.heading}
+        description={frontmatter.description}
+        name={frontmatter.name}
+        email={frontmatter.email}
+        message={frontmatter.message}
       />
     </Layout>
   )
@@ -55,10 +70,11 @@ export const contactPageQuery = graphql`
   query ContactPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
-        contact {
-          heading
-          description
-        }
+        heading
+        description
+        name
+        email
+        message
       }
     }
   }
