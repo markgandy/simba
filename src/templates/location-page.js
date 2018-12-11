@@ -5,7 +5,8 @@ import Layout from '../components/Layout'
 import SimbaMap from '../components/SimbaMap'
 
 export const LocationPageTemplate = ({
-  location,
+  heading,
+  description
 }) => (
   <section className="section section--gradient">
     <div className="container">
@@ -14,9 +15,9 @@ export const LocationPageTemplate = ({
           <div className="column is-10 is-offset-1">
             <div className="content">
               <h2 className="has-text-weight-semibold is-size-3">
-                {location.heading}
+                {heading}
               </h2>
-              <p className="is-size-5">{location.description}</p>
+              <p className="is-size-5">{description}</p>
               <SimbaMap />
             </div>
           </div>
@@ -27,10 +28,8 @@ export const LocationPageTemplate = ({
 )
 
 LocationPageTemplate.propTypes = {
-  location: PropTypes.shape({
-    heading: PropTypes.string,
-    description: PropTypes.string,
-  }),
+  heading: PropTypes.string,
+  description: PropTypes.string,
 }
 
 const LocationPage = ({ data }) => {
@@ -39,7 +38,8 @@ const LocationPage = ({ data }) => {
   return (
     <Layout>
       <LocationPageTemplate
-        location={frontmatter.location}
+        heading={frontmatter.heading}
+        description={frontmatter.description}
       />
     </Layout>
   )
@@ -59,10 +59,8 @@ export const locationPageQuery = graphql`
   query LocationPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
-        location {
-          heading
-          description
-        }
+        heading
+        description
       }
     }
   }
