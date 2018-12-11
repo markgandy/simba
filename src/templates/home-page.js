@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
-import Testimonials from '../components/Testimonials'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const HomePageTemplate = ({
@@ -12,7 +11,6 @@ export const HomePageTemplate = ({
   description,
   intro,
   main,
-  testimonials,
   fullImage,
 }) => (
   <div className="content">
@@ -57,7 +55,7 @@ export const HomePageTemplate = ({
         </div>
       </div>
     </div>
-    <Testimonials testimonials={testimonials} />
+    {/* <Testimonials testimonials={testimonials} /> */}
     <div
       className="full-width-image-container"
       style={{
@@ -86,7 +84,6 @@ HomePageTemplate.propTypes = {
     image2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     image3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   }),
-  testimonials: PropTypes.array,
   fullImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 }
 
@@ -102,7 +99,6 @@ const HomePage = ({ data }) => {
         description={frontmatter.description}
         intro={frontmatter.intro}
         main={frontmatter.main}
-        testimonials={frontmatter.testimonials}
         fullImage={frontmatter.full_image}
       />
     </Layout>
@@ -180,10 +176,6 @@ export const homePageQuery = graphql`
               }
             }
           }
-        }
-        testimonials {
-          author
-          quote
         }
         full_image {
           childImageSharp {

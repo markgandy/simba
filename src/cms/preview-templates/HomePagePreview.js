@@ -6,9 +6,6 @@ const HomePagePreview = ({ entry, getAsset }) => {
   const entryBlurbs = entry.getIn(['data', 'intro', 'blurbs'])
   const blurbs = entryBlurbs ? entryBlurbs.toJS() : []
 
-  const entryTestimonials = entry.getIn(['data', 'testimonials'])
-  const testimonials = entryTestimonials ? entryTestimonials.toJS() : []
-
   return (
     <HomePageTemplate
       image={entry.getIn(['data', 'image'])}
@@ -33,7 +30,6 @@ const HomePagePreview = ({ entry, getAsset }) => {
         },
       }}
       fullImage={entry.getIn(['data', 'full_image'])}
-      testimonials={testimonials}
     />
   )
 }
