@@ -8,23 +8,13 @@ export const LocationPageTemplate = ({
   heading,
   description
 }) => (
-  <section className="section section--gradient">
-    <div className="container">
-      <div className="section">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="content">
-              <h2 className="has-text-weight-semibold is-size-3">
-                {heading}
-              </h2>
-              <p className="is-size-5">{description}</p>
-              <SimbaMap />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div className="content">
+    <h2 className="has-text-weight-semibold is-size-3">
+      {heading}
+    </h2>
+    <p className="is-size-5">{description}</p>
+    <SimbaMap />
+  </div>
 )
 
 LocationPageTemplate.propTypes = {

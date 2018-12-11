@@ -11,25 +11,15 @@ export const ContactPageTemplate = ({
   email,
   message
 }) => (
-  <section className="section section--gradient">
-    <div className="container">
-      <div className="section">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="content">
-              <Contact 
-                heading={heading} 
-                description={description}
-                name={name}
-                email={email}
-                message={message}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div className="content">
+    <Contact 
+      heading={heading} 
+      description={description}
+      name={name}
+      email={email}
+      message={message}
+    />
+  </div> 
 )
 
 ContactPageTemplate.propTypes = {
