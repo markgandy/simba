@@ -5,7 +5,9 @@ import Layout from '../components/Layout'
 import Pricing from '../components/Pricing'
 
 export const PricingPageTemplate = ({
-  pricing,
+  heading,
+  description,
+  packages
 }) => (
   <section className="section section--gradient">
     <div className="container">
@@ -14,10 +16,10 @@ export const PricingPageTemplate = ({
           <div className="column is-10 is-offset-1">
             <div className="content">
               <h2 className="has-text-weight-semibold is-size-3">
-                {pricing.heading}
+                {heading}
               </h2>
-              <p className="is-size-5">{pricing.description}</p>
-              <Pricing data={pricing.plans} />
+              <p className="is-size-5">{description}</p>
+              <Pricing packages={packages} />
             </div>
           </div>
         </div>
@@ -27,11 +29,9 @@ export const PricingPageTemplate = ({
 )
 
 PricingPageTemplate.propTypes = {
-  pricing: PropTypes.shape({
-    heading: PropTypes.string,
-    description: PropTypes.string,
-    plans: PropTypes.array,
-  }),
+  heading: PropTypes.string,
+  description: PropTypes.string,
+  packages: PropTypes.array,
 }
 
 const PricingPage = ({ data }) => {
@@ -40,7 +40,9 @@ const PricingPage = ({ data }) => {
   return (
     <Layout>
       <PricingPageTemplate
-        pricing={frontmatter.pricing}
+        heading={frontmatter.heading}
+        description={frontmatter.description}
+        packages={frontmatter.packages}
       />
     </Layout>
   )
@@ -60,15 +62,13 @@ export const pricingPageQuery = graphql`
   query PricingPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
-        pricing {
-          heading
+        heading
+        description
+        packages {
+          name
           description
-          plans {
-            description
-            items
-            plan
-            price
-          }
+          items
+          price
         }
       }
     }

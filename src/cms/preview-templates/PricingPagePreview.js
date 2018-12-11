@@ -3,16 +3,14 @@ import PropTypes from 'prop-types'
 import { PricingPageTemplate } from '../../templates/pricing-page'
 
 const PricingPagePreview = ({ entry, getAsset }) => {
-  const entryPricingPlans = entry.getIn(['data', 'pricing', 'plans'])
+  const entryPricingPlans = entry.getIn(['data', 'packages'])
   const pricingPlans = entryPricingPlans ? entryPricingPlans.toJS() : []
 
   return (
     <PricingPageTemplate
-      pricing={{
-        heading: entry.getIn(['data', 'pricing', 'heading']),
-        description: entry.getIn(['data', 'pricing', 'description']),
-        plans: pricingPlans,
-      }}
+      heading={entry.getIn(['data', 'heading'])}
+      description={entry.getIn(['data', 'description'])}
+      packages={pricingPlans}
     />
   )
 }

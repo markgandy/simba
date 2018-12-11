@@ -1,5 +1,5 @@
 ---
-templateKey: 'index-page'
+templateKey: 'home-page'
 path: /
 image: /img/surfer-sunset.jpg
 heading: Surfing, accommodation and more
