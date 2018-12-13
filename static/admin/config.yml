@@ -5,12 +5,11 @@ backend:
 media_folder: static/img
 public_folder: /img
 
-editor:
-  preview: false
-
 collections:
   - name: "pages"
     label: "Pages"
+    editor:
+      preview: false
     files:
       - file: "src/pages/index.md"
         label: "Home Page"
