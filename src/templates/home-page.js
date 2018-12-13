@@ -71,7 +71,6 @@ export const HomePageTemplate = ({
 
 HomePageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
   heading: PropTypes.string,
   description: PropTypes.string,
   intro: PropTypes.shape({
@@ -87,18 +86,34 @@ HomePageTemplate.propTypes = {
   fullImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 }
 
-const HomePage = ({ data }) => {
+const HomePage = props => {
+  const { data } = props
   const { frontmatter } = data.markdownRemark
+  const locale = props.location.pathname.startsWith('/es') ? 'es' : 'en'
 
+  const localizedIntro = { 
+    blurbs: []
+  }
+  frontmatter.intro.blurbs.forEach(blurb => {
+    const localizedBlurb = { image: blurb.image, text: blurb.text[locale] }
+    localizedIntro.blurbs.push(localizedBlurb)
+  })
+
+  const localizedMain = {
+    heading: frontmatter.main.heading[locale],
+    description: frontmatter.main.description[locale],
+    image1: frontmatter.main.image1,
+    image2: frontmatter.main.image2,
+    image3: frontmatter.main.image3,
+  }
   return (
     <Layout>
       <HomePageTemplate
         image={frontmatter.image}
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
-        main={frontmatter.main}
+        heading={frontmatter.heading[locale]}
+        description={frontmatter.description[locale]}
+        intro={localizedIntro}
+        main={localizedMain}
         fullImage={frontmatter.full_image}
       />
     </Layout>
@@ -119,7 +134,6 @@ export const homePageQuery = graphql`
   query HomePage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
-        title
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
@@ -127,8 +141,14 @@ export const homePageQuery = graphql`
             }
           }
         }
-        heading
-        description
+        heading {
+          en
+          es
+        }
+        description {
+          en
+          es
+        }
         intro {
           blurbs {
             image {
@@ -138,14 +158,21 @@ export const homePageQuery = graphql`
                 }
               }
             }
-            text
+            text {
+              en
+              es
+            }
           }
-          heading
-          description
         }
         main {
-          heading
-          description
+          heading {
+            en
+            es
+          }
+          description {
+            en
+            es
+          }
           image1 {
             alt
             image {

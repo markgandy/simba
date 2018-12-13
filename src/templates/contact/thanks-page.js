@@ -20,14 +20,16 @@ ThanksPageTemplate.propTypes = {
   description: PropTypes.string,
 }
 
-const ThanksPage = ({ data }) => {
+const ThanksPage = props => {
+  const { data } = props
   const { frontmatter } = data.markdownRemark
+  const locale = props.location.pathname.startsWith('/es/') ? 'es' : 'en'
 
   return (
     <Layout>
       <ThanksPageTemplate
-        heading={frontmatter.heading}
-        description={frontmatter.description}
+        heading={frontmatter.heading[locale]}
+        description={frontmatter.description[locale]}
       />
     </Layout>
   )
@@ -47,8 +49,14 @@ export const thanksPageQuery = graphql`
   query ThanksPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
-        heading
-        description
+        heading {
+          en
+          es
+        }
+        description {
+          en
+          es
+        }
       }
     }
   }

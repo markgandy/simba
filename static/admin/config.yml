@@ -5,6 +5,9 @@ backend:
 media_folder: static/img
 public_folder: /img
 
+editor:
+  preview: false
+
 collections:
   - name: "pages"
     label: "Pages"
@@ -14,42 +17,41 @@ collections:
         name: "home"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page"}
-          - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Description, name: description, widget: string}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
-          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
+          - {label: Heading, name: heading, widget: object, fields: [{label: English, name: en, widget: string}, {label: Spanish, name: es, widget: string}]}
+          - {label: Description, name: description, widget: object, fields: [{label: English, name: en, widget: string}, {label: Spanish, name: es, widget: string}]}
+          - {label: Intro, name: intro, widget: object, fields: [{label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: object, fields: [{label: English, name: en, widget: string}, {label: Spanish, name: es, widget: string}]}]}]}
+          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: object, fields: [{label: English, name: en, widget: string}, {label: Spanish, name: es, widget: string}]}, {label: Description, name: description, widget: object, fields: [{label: English, name: en, widget: string}, {label: Spanish, name: es, widget: string}]}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
           - {label: Full_image, name: full_image, widget: image}
       - file: "src/pages/pricing/index.md"
         label: "Pricing Page"
         name: "pricing"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "pricing-page"}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Description, name: description, widget: string}
-          - {label: Packages, name: packages, widget: list, fields: [{label: Name, name: name, widget: string}, {label: Description, name: description, widget: string}, {label: Price, name: price, widget: string}, {label: Items, name: items, widget: list}]}
+          - {label: Heading, name: heading, widget: object, fields: [{label: English, name: en, widget: string}, {label: Spanish, name: es, widget: string}]}
+          - {label: Description, name: description, widget: object, fields: [{label: English, name: en, widget: string}, {label: Spanish, name: es, widget: string}]}
+          - {label: Packages, name: packages, widget: list, fields: [{label: Name, name: name, widget: object, fields: [{label: English, name: en, widget: string}, {label: Spanish, name: es, widget: string}]}, {label: Description, name: description, widget: object, fields: [{label: English, name: en, widget: string}, {label: Spanish, name: es, widget: string}]}, {label: Price, name: price, widget: string}, {label: Items, name: items, widget: list, fields: [{label: English, name: en, widget: string}, {label: Spanish, name: es, widget: string}]}]}
       - file: "src/pages/location/index.md"
         label: "Location Page"
         name: "location"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "location-page"}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Description, name: description, widget: string}
+          - {label: Heading, name: heading, widget: object, fields: [{label: English, name: en, widget: string}, {label: Spanish, name: es, widget: string}]}
+          - {label: Description, name: description, widget: object, fields: [{label: English, name: en, widget: string}, {label: Spanish, name: es, widget: string}]}
       - file: "src/pages/contact/index.md"
         label: "Contact Page"
         name: "contact"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Description, name: description, widget: string}
-          - {label: Name, name: name, widget: string}
-          - {label: Email, name: email, widget: string}
-          - {label: Message, name: message, widget: string}
+          - {label: Heading, name: heading, widget: object, fields: [{label: English, name: en, widget: string}, {label: Spanish, name: es, widget: string}]}
+          - {label: Description, name: description, widget: object, fields: [{label: English, name: en, widget: string}, {label: Spanish, name: es, widget: string}]}
+          - {label: Name, name: name, widget: object, fields: [{label: English, name: en, widget: string}, {label: Spanish, name: es, widget: string}]}
+          - {label: Email, name: email, widget: object, fields: [{label: English, name: en, widget: string}, {label: Spanish, name: es, widget: string}]}
+          - {label: Message, name: message, widget: object, fields: [{label: English, name: en, widget: string}, {label: Spanish, name: es, widget: string}]}
       - file: "src/pages/contact/thanks.md"
         label: "Thanks Page"
         name: "thanks"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "thanks-page"}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Description, name: description, widget: string}
+          - {label: Heading, name: heading, widget: object, fields: [{label: English, name: en, widget: string}, {label: Spanish, name: es, widget: string}]}
+          - {label: Description, name: description, widget: object, fields: [{label: English, name: en, widget: string}, {label: Spanish, name: es, widget: string}]}

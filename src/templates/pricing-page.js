@@ -24,15 +24,31 @@ PricingPageTemplate.propTypes = {
   packages: PropTypes.array,
 }
 
-const PricingPage = ({ data }) => {
+const PricingPage = props => {
+  const { data } = props
   const { frontmatter } = data.markdownRemark
+  const locale = props.location.pathname.startsWith('/es/') ? 'es' : 'en'
+  const loaclizedPackages = []
+  frontmatter.packages.forEach(pack => {
+    const localizedPackage = {
+      name: pack.name[locale],
+      description: pack.description[locale],
+      items: [],
+      price: pack.price
+    }
+    pack.items.forEach(item => {
+      const localizedItem = item[locale]
+      localizedPackage.items.push(localizedItem)
+    })
+    loaclizedPackages.push(localizedPackage)
+  })
 
   return (
     <Layout>
       <PricingPageTemplate
-        heading={frontmatter.heading}
-        description={frontmatter.description}
-        packages={frontmatter.packages}
+        heading={frontmatter.heading[locale]}
+        description={frontmatter.description[locale]}
+        packages={loaclizedPackages}
       />
     </Layout>
   )
@@ -52,12 +68,27 @@ export const pricingPageQuery = graphql`
   query PricingPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
-        heading
-        description
+        heading {
+          en
+          es
+        }
+        description {
+          en
+          es
+        }
         packages {
-          name
-          description
-          items
+          name {
+            en
+            es
+          }
+          description {
+            en
+            es
+          }
+          items {
+            en
+            es
+          }
           price
         }
       }

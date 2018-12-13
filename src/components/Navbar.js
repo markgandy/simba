@@ -7,18 +7,18 @@ const Navbar = () => (
   <nav className="navbar is-transparent">
     <div className="container">
       <div className="navbar-brand">
-        <Link to="/" className="navbar-item" title="Logo">
+        <Link to="/en" className="navbar-item" title="Logo">
           <img src={logo} alt="Simba Surf" style={{ width: '190px', maxHeight: '2.5rem' }} />
         </Link>
       </div>
       <div className="navbar-start">
-        <Link className="navbar-item" to="/location">
+        <Link className="navbar-item" to="/en/location">
           Location
         </Link>
-        <Link className="navbar-item" to="/pricing">
+        <Link className="navbar-item" to="/en/pricing">
           Pricing
         </Link>
-        <Link className="navbar-item" to="/contact">
+        <Link className="navbar-item" to="/en/contact">
           Contact
         </Link>
       </div>
@@ -43,7 +43,7 @@ const Navbar = () => (
             <FaFacebookF />
           </span>
         </a>
-        <Link className="navbar-item" to="/contact">
+        <Link className="navbar-item" to="/en/contact">
           <span className="icon">
             <FaWhatsapp />
           </span>

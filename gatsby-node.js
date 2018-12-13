@@ -30,18 +30,29 @@ exports.createPages = ({ actions, graphql }) => {
 
     const posts = result.data.allMarkdownRemark.edges
 
+    // TODO create / redirect to /en or /es
     posts.forEach(edge => {
       const id = edge.node.id
       createPage({
-        path: edge.node.fields.slug,
+        path: '/en' + edge.node.fields.slug,
         component: path.resolve(
           `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
         ),
         // additional data can be passed via context
         context: {
-          id,
+          id
         },
       })
+      createPage({
+        path: '/es' + edge.node.fields.slug,
+        component: path.resolve(
+          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
+        ),
+        // additional data can be passed via context
+        context: {
+          id
+        },
+      })      
     })
 
   })

@@ -30,17 +30,18 @@ ContactPageTemplate.propTypes = {
   message: PropTypes.string,
 }
 
-const ContactPage = ({ data }) => {
+const ContactPage = props => {
+  const { data } = props
   const { frontmatter } = data.markdownRemark
-
+  const locale = props.location.pathname.startsWith('/es/') ? 'es' : 'en'
   return (
     <Layout>
       <ContactPageTemplate
-        heading={frontmatter.heading}
-        description={frontmatter.description}
-        name={frontmatter.name}
-        email={frontmatter.email}
-        message={frontmatter.message}
+        heading={frontmatter.heading[locale]}
+        descriptionx={frontmatter.description[locale]}
+        name={frontmatter.name[locale]}
+        email={frontmatter.email[locale]}
+        message={frontmatter.message[locale]}
       />
     </Layout>
   )
@@ -60,11 +61,26 @@ export const contactPageQuery = graphql`
   query ContactPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
-        heading
-        description
-        name
-        email
-        message
+        heading {
+          en
+          es
+        }
+        description {
+          en
+          es
+        }
+        name {
+          en
+          es
+        }
+        email {
+          en
+          es
+        }
+        message {
+          en
+          es
+        }
       }
     }
   }

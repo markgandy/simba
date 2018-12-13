@@ -22,14 +22,16 @@ LocationPageTemplate.propTypes = {
   description: PropTypes.string,
 }
 
-const LocationPage = ({ data }) => {
+const LocationPage = props => {
+  const { data } = props
   const { frontmatter } = data.markdownRemark
+  const locale = props.location.pathname.startsWith('/es/') ? 'es' : 'en'
 
   return (
     <Layout>
       <LocationPageTemplate
-        heading={frontmatter.heading}
-        description={frontmatter.description}
+        heading={frontmatter.heading[locale]}
+        description={frontmatter.description[locale]}
       />
     </Layout>
   )
@@ -49,8 +51,14 @@ export const locationPageQuery = graphql`
   query LocationPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
-        heading
-        description
+        heading {
+          en
+          es
+        }
+        description {
+          en
+          es
+        }
       }
     }
   }
