@@ -1,6 +1,6 @@
 ---
 templateKey: 'contact/thanks-page'
-path: /contact/thanks
+path: /:locale/contact/thanks
 heading:
   en: Thank you for contacting us!
   es: sThank you for contacting us!

@@ -1,6 +1,6 @@
 ---
 templateKey: 'location-page'
-path: /location
+path: /:locale/location
 heading:
   en: Where are we?
   es: sWhere are we?

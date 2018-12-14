@@ -1,6 +1,6 @@
 ---
 templateKey: 'pricing-page'
-path: /pricing
+path: /:locale/pricing
 heading:
   en: Packages
   es: sPackages

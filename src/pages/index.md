@@ -1,6 +1,6 @@
 ---
 templateKey: 'home-page'
-path: /
+path: /:locale
 image: /img/surfer-sunset.jpg
 heading:
   en: Surfing, accommodation and more
