@@ -65,14 +65,14 @@ main:
     en: "At Simba Surf you can make new friends, and have fun with the many activities - enjoy  as much or as little as you like. As locals, we can help you with advice on the best tours  to do in the area. And we would love to take you to Beerkingo for some delicious local craft beer \U0001F37B\n"
     es: "En Simba Surf puedes hacer nuevos amigos y divertirte con las múltiples actividades, disfruta tanto o tan poco como quieras. Como lugareños, podemos ayudarlo con consejos sobre las mejores excursiones para realizar en el área. Y nos encantaría llevarte a Beerkingo para disfrutar de una deliciosa cerveza artesanal local \U0001F37B"
   image1:
-    alt: A close-up of a paper filter filled with ground coffee
-    image: /img/products-grid3.jpg
+    alt: Beers
+    image: /img/beerkingo.jpg
   image2:
-    alt: A green cup of a coffee on a wooden table
-    image: /img/products-grid2.jpg
+    alt: Surf lesson
+    image: /img/surf-lesson.jpg
   image3:
-    alt: Coffee beans
-    image: /img/products-grid1.jpg
-full_image: /img/products-full-width.jpg
+    alt: Casa
+    image: /img/casa.jpg
+full_image: /img/sunset.jpg
 ---
 
