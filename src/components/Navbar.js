@@ -13,7 +13,7 @@ const Navbar = () => (
             const locale = location.pathname.startsWith('/es') ? 'es' : 'en' 
             return (
               <Link to={`/${locale}`} className="navbar-item" title="Logo">
-                <img src={logo} alt="Simba Surf" style={{ width: '190px', maxHeight: '2.5rem' }} />
+                <img src={logo} alt="Simba Surf" style={{ width: '200px', maxHeight: '3.5rem' }} />
               </Link>
             )
           }}
