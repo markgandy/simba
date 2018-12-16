@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import logo from '../img/logo.png'
-import { FaInstagram, FaFacebookF, FaWhatsapp, FaGlobe } from 'react-icons/fa';
+import { FaInstagram, FaFacebookF, FaGlobe } from 'react-icons/fa'
 import { Location } from '@reach/router'
 
 const Navbar = () => (
@@ -104,21 +104,7 @@ const Navbar = () => (
                     <FaFacebookF />
                   </span>
                 </a>
-              </p>
-              <p className="control">
-                <Location>
-                  { ({ location }) => {
-                    const locale = location.pathname.startsWith('/es') ? 'es' : 'en' 
-                    return (
-                      <Link className="button" to={`/${locale}/contact`}>
-                        <span className="icon">
-                          <FaWhatsapp />
-                        </span>
-                      </Link>
-                    )
-                  }}
-                </Location>
-              </p>                       
+              </p>                     
             </div>
           </div>
         </div>

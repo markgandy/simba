@@ -38,7 +38,7 @@ const ContactPage = props => {
     <Layout>
       <ContactPageTemplate
         heading={frontmatter.heading[locale]}
-        descriptionx={frontmatter.description[locale]}
+        description={frontmatter.description[locale]}
         name={frontmatter.name[locale]}
         email={frontmatter.email[locale]}
         message={frontmatter.message[locale]}
