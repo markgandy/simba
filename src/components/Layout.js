@@ -1,6 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from "gatsby"
+import favicon from '../img/favicon.png'
 
 import Navbar from '../components/Navbar'
 import './all.sass'
@@ -23,6 +24,7 @@ const TemplateWrapper = ({ children }) => (
           <html lang="en" />
           <title>{data.site.siteMetadata.title}</title>
           <meta name="description" content={data.site.siteMetadata.description} />
+          <link rel="shortcut icon" type="image/png" href={favicon} />
         </Helmet>
         <Navbar />
         <section className="section section--gradient">
