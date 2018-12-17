@@ -80,15 +80,7 @@ export default class Contact extends React.Component {
                   </div>
                 </div>
                 <div className="field">
-                  <Location>
-                    { ({ location }) => {
-                      const locale = location.pathname.startsWith('/es') ? 'es' : 'en' 
-                      return (
-                        <button className="button is-link" type="submit">{locale === 'es' ? 'Envíe' : 'Send'}</button>
-                      )
-                    }}
-                  </Location>
-                  
+                  <button className="button is-link" type="submit">{locale === 'es' ? 'Envíe' : 'Send'}</button>
                 </div>
               </form>
             )
