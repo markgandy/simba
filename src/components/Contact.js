@@ -41,52 +41,59 @@ export default class Contact extends React.Component {
           {heading}
         </h2>
         <p className="is-size-5">{description}</p>
-        <form
-          name="contact"
-          method="post"
-          action="/contact/thanks/"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          onSubmit={this.handleSubmit}
-        >
-          {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-          <input type="hidden" name="form-name" value="contact" />
-          <div hidden>
-            <label>
-              Don’t fill this out:{" "}
-              <input name="bot-field" onChange={this.handleChange} />
-            </label>
-          </div>
-          <div className="field">
-            <label className="label" htmlFor={"name"} >{name}</label>
-            <div className="control">
-              <input className="input" type={"text"} name={"name"} onChange={this.handleChange} id={"name"} required={true} />
-            </div>
-          </div>
-          <div className="field">
-            <label className="label" htmlFor={"email"}>{email}</label>
-              <div className="control">
-                <input className="input" type={"email"} name={"email"} onChange={this.handleChange} id={"email"} required={true} />
-              </div>
-          </div>
-          <div className="field">
-            <label className="label" htmlFor={"message"}>{message}</label>
-            <div className="control">
-              <textarea className="textarea" name={"message"} onChange={this.handleChange} id={"message"} required={true} />
-            </div>
-          </div>
-          <div className="field">
-            <Location>
-              { ({ location }) => {
-                const locale = location.pathname.startsWith('/es') ? 'es' : 'en' 
-                return (
-                  <button className="button is-link" type="submit">{locale === 'es' ? 'Envíe' : 'Send'}</button>
-                )
-              }}
-            </Location>
-            
-          </div>
-        </form>
+        <Location>
+        { ({ location }) => {
+            const locale = location.pathname.startsWith('/es') ? 'es' : 'en' 
+            return (
+              <form
+                name="contact"
+                method="post"
+                action={`/${locale}/contact/thanks/`}
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                onSubmit={this.handleSubmit}
+              >
+                {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+                <input type="hidden" name="form-name" value="contact" />
+                <div hidden>
+                  <label>
+                    Don’t fill this out:{" "}
+                    <input name="bot-field" onChange={this.handleChange} />
+                  </label>
+                </div>
+                <div className="field">
+                  <label className="label" htmlFor={"name"} >{name}</label>
+                  <div className="control">
+                    <input className="input" type={"text"} name={"name"} onChange={this.handleChange} id={"name"} required={true} />
+                  </div>
+                </div>
+                <div className="field">
+                  <label className="label" htmlFor={"email"}>{email}</label>
+                    <div className="control">
+                      <input className="input" type={"email"} name={"email"} onChange={this.handleChange} id={"email"} required={true} />
+                    </div>
+                </div>
+                <div className="field">
+                  <label className="label" htmlFor={"message"}>{message}</label>
+                  <div className="control">
+                    <textarea className="textarea" name={"message"} onChange={this.handleChange} id={"message"} required={true} />
+                  </div>
+                </div>
+                <div className="field">
+                  <Location>
+                    { ({ location }) => {
+                      const locale = location.pathname.startsWith('/es') ? 'es' : 'en' 
+                      return (
+                        <button className="button is-link" type="submit">{locale === 'es' ? 'Envíe' : 'Send'}</button>
+                      )
+                    }}
+                  </Location>
+                  
+                </div>
+              </form>
+            )
+          }}
+        </Location>
       </div>
     );
   }
