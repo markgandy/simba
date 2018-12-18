@@ -34,6 +34,7 @@ const SEO = () => (
           <meta property="og:url" content={seo.url} />
           <meta property="og:title" content={seo.title} />
           <meta property="og:description" content={seo.description} />
+          <meta name="google-site-verification" content="h1ykWKHK858poGc-oW9r8LjFvy6UMHQwyT2O7XJN4HY" />
         </Helmet>
       )
     }}
