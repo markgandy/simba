@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import logo from '../img/logo.png'
 import { FaInstagram, FaFacebookF, FaGlobe } from 'react-icons/fa'
 import { Location } from '@reach/router'
+import pageConfig from '../config/page-config'
 
 const Navbar = () => (
   <nav className="navbar is-transparent">
@@ -12,7 +13,7 @@ const Navbar = () => (
           { ({ location }) => {
             const locale = location.pathname.startsWith('/es') ? 'es' : 'en' 
             return (
-              <Link to={`/${locale}`} className="navbar-item" title="Logo">
+              <Link to={`/${locale}`} className="navbar-item" title="Simba Surf">
                 <img src={logo} alt="Simba Surf" style={{ width: '200px', maxHeight: '3.5rem' }} />
               </Link>
             )
@@ -32,7 +33,7 @@ const Navbar = () => (
               const locale = location.pathname.startsWith('/es') ? 'es' : 'en' 
               return (
                 <Link className="navbar-item" to={`/${locale}/location`}>
-                  {locale === 'es' ? 'Ubicación' : 'Location'}
+                  {pageConfig.location[locale]}
                 </Link>
               )
             }}
@@ -42,7 +43,7 @@ const Navbar = () => (
               const locale = location.pathname.startsWith('/es') ? 'es' : 'en' 
               return (
                 <Link className="navbar-item" to={`/${locale}/pricing`}>
-                  {locale === 'es' ? 'Precios' : 'Pricing'}
+                  {pageConfig.pricing[locale]}
                 </Link>
               )
             }}
@@ -52,7 +53,7 @@ const Navbar = () => (
               const locale = location.pathname.startsWith('/es') ? 'es' : 'en' 
               return (
                 <Link className="navbar-item" to={`/${locale}/contact`}>
-                  {locale === 'es' ? 'Contacto' : 'Contact'}
+                  {pageConfig.contact[locale]}
                 </Link>
               )
             }}
@@ -65,7 +66,7 @@ const Navbar = () => (
                 <FaGlobe />&nbsp;
               </span>
               <Location>
-                { ({ location }) => location.pathname.startsWith('/es') ? 'Español' : 'English' }
+                { ({ location }) => location.pathname.startsWith('/es') ? pageConfig.lang.es : pageConfig.lang.en }
               </Location>
             </a>
             <div className="navbar-dropdown">
@@ -76,7 +77,7 @@ const Navbar = () => (
                   console.log(newLocation) // not sure why this doesn't work?
                   return (
                     <Link className="navbar-item" to={location.pathname.startsWith('/es') ? '/en' : '/es'}>
-                      {location.pathname.startsWith('/es') ? 'English' : 'Español'}
+                      {location.pathname.startsWith('/es') ? pageConfig.lang.en : pageConfig.lang.es}
                     </Link>
                   )
                 }}

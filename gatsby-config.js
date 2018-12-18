@@ -1,8 +1,4 @@
 module.exports = {
-  siteMetadata: {
-    title: 'Simba Surf',
-    description: 'Website for Simba Surf',
-  },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
