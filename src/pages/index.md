@@ -17,7 +17,7 @@ description:
     con algunos descansos increíbles para surfistas principiantes y avanzados.
 intro:
   blurbs:
-    - image: /img/surfing.png
+    - image: /img/surf.png
       text:
         en: >
           There is surfing, of course. You can take lessons with our super cool
@@ -27,7 +27,7 @@ intro:
           Hay surf, por supuesto. Puede tomar clases con nuestros instructores
           súper geniales, o contratar algunos de nuestros equipos de alta
           calidad y salir por su cuenta. ¿Que estas esperando? Surfea hasta tio!
-    - image: /img/camping.png
+    - image: /img/tent.png
       text:
         en: >
           We have camping available, with some tents already on site that you
@@ -57,6 +57,26 @@ intro:
           ¿Alguien para Salsa? Bailar salsa es una de las danzas sociales más
           populares del mundo. Puede aprender / practicar con nosotros:
           diviértase, gane confianza y póngase en forma al mismo tiempo.
+    - image: /img/volunteer.png
+      text:
+        en: >-
+          Would you like to volunteer at Simba Surf? We generally offer free 
+          accommodation in exchange for a couple of hours work a day. See 
+          [WorkAway] for more details!
+        es: >-
+          ¿Te gustaría ser voluntario en Simba Surf? Por lo general ofrecemos de
+          forma gratuita alojamiento a cambio de un par de horas de trabajo al día.
+          ¡Véase [WorkAway] web para más detalles!
+    - image: /img/studying.png
+      text:
+        en: >-
+          How is your Spanish? If you are looking to improve your conversational
+          skills, or if you are a total beginner, we can arrange some Spanish
+          classes at the right level for you.
+        es: >-
+          ¿Como es tu español? Si buscas mejorar tu conversación habilidades, o si
+          eres un principiante total, podemos organizar clases de español en el
+          nivel correcto para ti.                
 main:
   heading:
     en: A great community with so much to do
@@ -75,4 +95,3 @@ main:
     image: /img/casa.jpg
 full_image: /img/sunset.jpg
 ---
-

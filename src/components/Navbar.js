@@ -99,7 +99,8 @@ const Navbar = () => (
               <p className="control">
                 <a 
                   className="button"
-                  // target="_blank"
+                  target="_blank"
+                  href="https://facebook.com/SimbaSurfEcuador"
                 >
                   <span className="icon">
                     <FaFacebookF />

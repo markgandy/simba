@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import { Location } from '@reach/router'
 
 export const HomePageTemplate = ({
   image,
@@ -116,6 +117,31 @@ const HomePage = props => {
         main={localizedMain}
         fullImage={frontmatter.full_image}
       />
+      <footer className="footer">
+        <div className="content has-text-centered">
+          <Location>
+            { ({ location }) => {
+            const locale = location.pathname.startsWith('/es') ? 'es' : 'en'
+            return (
+              <p>
+                ❤️ {locale === 'es' ? 'a' : 'to'}&nbsp;
+                <a href="https://www.freepik.com/" title="Freepik">
+                  Freepik
+                </a>
+                &nbsp;{locale === 'es' ? 'y' : 'and'}&nbsp;
+                <a href="https://www.flaticon.com/" title="Flaticon">
+                  Flaticon
+                </a>
+                &nbsp;{locale === 'es' ? 'por los iconos - licenciado por' : 'for the icons - licensed by'}&nbsp;
+                <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">
+                  CC 3.0 BY
+                </a>.
+              </p>
+            )
+            }}
+          </Location>
+        </div>
+      </footer>
     </Layout>
   )
 }
