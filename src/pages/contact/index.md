@@ -18,4 +18,10 @@ email:
 message:
   en: Message
   es: Mensaje
+image_1:
+  alt: Simba sleeping
+  image: /img/simba-sleeping.jpg
+image_2:
+  alt: Surfer in mud
+  image: /img/surfer-in-mud.jpg    
 ---

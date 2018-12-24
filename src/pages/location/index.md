@@ -17,5 +17,8 @@ description:
     la playa, pero todavía lo suficientemente cerca para caminar hacia la ciudad
     en unos 25 minutos. ¡Canoa es famosa por tener las puestas de sol más
     increíbles!
+image_1:
+  alt: Beach with surfers and dogs
+  image: /img/beach-surfers-dogs.jpg
 ---
 

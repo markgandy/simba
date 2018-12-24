@@ -55,7 +55,13 @@ packages:
         es: Tour de la cervecería Beerkingo
     name:
       en: 7 days
-      es: '7 días '
+      es: 7 días
     price: '149'
+image_1:
+  alt: Canoa shirt
+  image: /img/canoa-shirt.jpg
+image_2:
+  alt: Surfer lying on beach
+  image: /img/surfer-lying-on-beach.jpg
 ---
 

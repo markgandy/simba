@@ -87,6 +87,7 @@ export default class Contact extends React.Component {
             )
           }}
         </Location>
+        <br/>
       </div>
     );
   }
